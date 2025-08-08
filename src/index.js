@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './outpt.css';
+import './App.css';
+import 'tailwindcss/tailwind.css'; // Ensure Tailwind CSS is imported
+import 'postcss'; // Ensure PostCSS is imported if needed
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

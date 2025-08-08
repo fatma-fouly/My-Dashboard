@@ -1,0 +1,40 @@
+/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+.fixed {
+  position: fixed;
+}
+.container {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+.w-1\/4 {
+  width: calc(1/4 * 100%);
+}
+.w-3\/4 {
+  width: calc(3/4 * 100%);
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

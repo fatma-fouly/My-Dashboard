@@ -1,0 +1,31 @@
+.form{
+    width: 50% !important;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1) !important;
+    margin: auto;
+    /* margin-top: 60px; */
+    height: auto;
+    padding: 50px 20px;
+    gap: 1rem;
+    background-color: #fff;
+}
+.submitButton{
+    width:30%;
+    padding: 10px;
+    margin-top: 20px;
+    background: linear-gradient(0.25turn ,#39c4ee, #970000) !important;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.field{
+    width: 50%;
+    padding: 10px;
+    border-bottom: 2px solid #000000;
+    border-top: none;
+    border-right: none   ;
+    border-left: none;
+    outline: none;
+    margin-bottom: 10px;
+}
