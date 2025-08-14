@@ -1,8 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+.sidebar-icons {
+  @apply h-6 w-6 text-white inline-block mr-2
+}
+.listBar{
+  @apply font-bold  mt-4  px-3 py-2 hover:bg-gray-700 rounded-md hover:text-gray-300;
+}
+.thStyle {
+  @apply text-left px-4 py-2 border-gray-100 text-gray-700 font-medium text-xs uppercase tracking-wider;
+}
 
 body {
   margin: 0;
