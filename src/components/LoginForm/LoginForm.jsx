@@ -44,7 +44,7 @@ const handleValidate = (values) => {
     validateOnChange={true}
     >
     {({errors , handleSubmit}) => 
-      <form onSubmit={handleSubmit} className={`${styles.form} flex flex-col items-center justify-center h-screen container gap-2.5 `}>
+      <form onSubmit={handleSubmit} className={`${styles.form} flex flex-col items-center justify-center h-screen w-full md:w-2/4 gap-2.5  `}>
          <h2>Welcome!</h2>
         <Field name = "username" className={`${styles.field}`} type="text" />
         {errors.username && <p className='text-red-600'>{errors.username}</p>}

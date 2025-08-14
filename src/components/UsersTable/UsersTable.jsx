@@ -5,13 +5,23 @@ import { PencilSquareIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { useGetUsers } from '../customHooks/useGetUsers';
 
 export default function UsersTable() {
-
-
 const users =useGetUsers();
+const [getUser , setGetUser]=useState([])
+
+useEffect(() => {
+  if (users && users.length > 0) {
+    setGetUser(users);
+  }
+} , [users]);
+
+const handleDelete = (id) => {
+    const updatedUsers = getUser.filter(user => user.id !== id);
+    setGetUser(updatedUsers);
+  }
 
   return (
     <div  className='mx-3'>
-     <Cards usersNum = {users.length} />
+     <Cards usersNum = {getUser.length} />
     <div className='border-b border-gray-200  rounded-lg shadow-sm'>
        <table className='ml-3 mt-6 w-full '>
       <thead className='bg-gray-100'>
@@ -24,7 +34,7 @@ const users =useGetUsers();
         </tr>
       </thead>
       <tbody>
-      {users.map((user) => (
+      {getUser.map((user) => (
         <tr key={user.id} className='text-left'> 
         <td>
           <Link to={`/profile/${user.id}`} className='px-6 py-4 flex items-center text-gray-700s'>
@@ -40,7 +50,7 @@ const users =useGetUsers();
           <PencilSquareIcon className='w-6 h-6 rounded-md ml-5  text-green-600 '/>
         </td>
         <td className='text-center rounded-md'>
-          < TrashIcon className='w-6 h-6 rounded-md ml-5  text-red-600 '/>
+          < TrashIcon onClick={()=> handleDelete(user.id)} className='w-6 h-6 rounded-md ml-5  text-red-600 '/>
         </td>
 
         </tr>  ))} 
